@@ -1,0 +1,18 @@
+The primary difference between an interface and an abstract class in C# 
+(and in object-oriented programming generally) lies in their purpose, structure, and how they are used to define the behaviors and properties of classes.
+Here’s a breakdown along with an example to illustrate:
+1. Interface
+Definition: An interface defines a contract or a set of capabilities that a class must implement. It only contains method signatures, properties, events, or indexers without any implementation.
+Usage: When you want to ensure that multiple classes follow the same set of methods or properties without enforcing a specific hierarchy, interfaces are a great fit.
+Characteristics:
+Cannot contain any fields (variables) or implemented methods (in .NET Core 3.0+, default interface methods are allowed, but these are rarely used).
+A class can implement multiple interfaces, supporting multiple inheritance.
+All methods and properties in an interface are implicitly public.
+
+2. Abstract Class
+Definition: An abstract class serves as a base class that may contain both fully implemented and abstract members (methods without implementation).
+Usage: Abstract classes are useful when you want to define common behavior across multiple derived classes, with some shared implementation and some parts requiring overriding in derived classes.
+Characteristics:
+Can contain fields, properties, and methods with implementation.
+A class can only inherit from one abstract class, so abstract classes support single inheritance.
+Abstract members (methods, properties) must be overridden by derived classes.
